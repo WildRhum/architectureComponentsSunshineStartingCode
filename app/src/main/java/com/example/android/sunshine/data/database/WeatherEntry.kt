@@ -24,7 +24,7 @@ import android.arch.persistence.room.Room;
 
 import java.util.Date;
 
-@Entity(tableName = "weather", indices = [(Index(value = ("date"), unique = true))])
+@Entity(tableName = "weather", indices = [(Index(value = [("date")], unique = true))])
 class WeatherEntry
 /**
  * This constructor is used by OpenWeatherJsonParser. When the network fetch has JSON data, it
@@ -39,7 +39,8 @@ class WeatherEntry
  * @param degrees Wind direction
  */
 
-(@PrimaryKey (autoGenerate = true) val id: Int = 0, val weatherIconId: Int, val date: Date, val min: Double, val max: Double, val humidity: Double, val pressure: Double, val wind: Double, val degrees: Double) {
+(@PrimaryKey (autoGenerate = true) val id: Int = 0, var weatherIconId: Int, var date: Date, var min: Double, var max: Double, var humidity: Double, var pressure: Double, var wind: Double, var degrees: Double) {
+    constructor(weatherIconId: Int, date1: Date, max1: Double, min1: Double, humidity1: Int, pressure1: Double, windSpeed: Double, windDirection: Double) : this() {
 
-
+    }
 }

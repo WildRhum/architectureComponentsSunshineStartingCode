@@ -10,9 +10,8 @@ internal object DateConverter {
         return if (timestamp == null) null else Date(timestamp)
     }
 
-
     @TypeConverter
     fun toTimestamp(date: Date?): Long? {
-        return (if (date == null) null else date!!.time.toLong())
+        return (if (date == null) null else date.time.toLong())
     }
 }
