@@ -38,4 +38,4 @@ data class WeatherEntry
  * @param wind Wind speed
  * @param degrees Wind direction
  */
-(val weatherIconId: Int, val date: Date, val min: Double, val max: Double, val humidity: Int, val pressure: Double, val wind: Double, val degrees: Double, @PrimaryKey (autoGenerate = true) val id: Int = 0) {}
+(val weatherIconId: Int, val date: Date, val min: Double, val max: Double, val humidity: Int, val pressure: Double, val wind: Double, val degrees: Double, @PrimaryKey (autoGenerate = true) val id: Int = 0)

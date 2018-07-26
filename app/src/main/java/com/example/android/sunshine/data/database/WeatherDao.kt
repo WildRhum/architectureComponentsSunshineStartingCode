@@ -15,7 +15,7 @@ interface WeatherDao  {
     fun getWeatherByDate(date: Date): WeatherEntry
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun bulkInsert(vararg weather: WeatherEntry)
+    fun bulkInsert(weather: Array<WeatherEntry>)
 
     abstract fun WeatherDao(): WeatherDao
 }
